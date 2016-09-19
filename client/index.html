@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   <meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<title>Townblast logviewer</title>
+	<style>
+	div.scrollable {
+	border-style: solid;
+	position: relative;
+	padding: 15px 10px 2px 5px;
+	margin: 0px 0px 15px;
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(221, 221, 221);
+	border-width: 1px;
+	border-radius: 4px 4px 0px 0px;
+	box-shadow: none;
+	}
+</style>
+   </head>
+   <body onload="javascript:webSocket()" style="padding:15px;">
+      <div class="scrollable">
+         <table id="table" class="table table-hover">
+		 <thead>
+           <tr>
+			  <th width="20%">Time </th>
+			  <th width="20%">Threadname </th>
+			  <th width="10%">Level</th>
+			  <th>Message</th>
+           </tr>
+		</thead>		
+			 <tbody>
+			 </tbody>
+		  </table>
+      </div>
+   </body>
+</html>
