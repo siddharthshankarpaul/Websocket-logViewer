@@ -30,6 +30,7 @@ public class WSServer extends WebSocketServer {
 		System.out.println("Received:" + message);
 
 	}
+	@Override
 	public void onMessage(WebSocket conn, ByteBuffer message) {
 		System.out.println("Received bytes:" + message); 
 	}
@@ -49,7 +50,9 @@ public class WSServer extends WebSocketServer {
 	}
 	public void send(String message) {
 		for(WebSocket conn:this.connections()){
-			conn.send(message);
+			synchronized(conn){
+			 conn.send(message);
+			}
 		}		
 	}
 }
