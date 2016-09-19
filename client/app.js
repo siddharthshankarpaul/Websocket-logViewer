@@ -1,7 +1,7 @@
  function webSocket() {
 	var table =$("#table").logTable(); 	 
 	 window.WebSocket = window.WebSocket || window.MozWebSocket;
-	 var ws = new WebSocket("ws://54.242.138.26:8085");
+	 var ws = new WebSocket("ws://127.0.0.1:8085");
 	   ws.onopen = function() {
 		  //alert("Open...");
 	   };				
